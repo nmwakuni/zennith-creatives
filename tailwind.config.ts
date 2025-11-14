@@ -1,6 +1,7 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Design System Colors
         'primary-blue': '#00d4ff',
         'primary-violet': '#8b5cf6',
         'secondary-green': '#00ff88',
@@ -32,7 +32,7 @@ const config: Config = {
       backgroundImage: {
         'gradient-primary': 'linear-gradient(135deg, #00d4ff 0%, #8b5cf6 100%)',
         'gradient-radial': 'radial-gradient(circle, var(--tw-gradient-stops))',
-        'noise': "url('/noise.png')",
+        'noise': "url('/noise.svg')",
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
