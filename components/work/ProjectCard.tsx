@@ -22,7 +22,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         className="group block relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary-blue/50 transition-all duration-500"
       >
         {/* Project Image */}
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-[4/5] overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-bg-black via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="w-full h-full bg-gradient-to-br from-primary-blue/20 to-primary-violet/20" />
           <motion.div
@@ -42,7 +42,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         {/* Project Info */}
-        <div className="p-6">
+        <div className="p-4">
           <div className="flex items-center gap-3 mb-2">
             <span className="text-sm font-semibold text-text-white">
               {project.client}
@@ -50,11 +50,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <span className="text-sm text-text-muted">{project.year}</span>
           </div>
 
-          <h3 className="text-xl font-bold mb-2 group-hover:text-primary-blue transition-colors">
+          <h3 className="text-lg font-bold mb-2 group-hover:text-primary-blue transition-colors">
             {project.title}
           </h3>
 
-          <p className="text-text-gray text-sm mb-4 line-clamp-2">
+          <p className="text-text-gray text-sm mb-3 line-clamp-2">
             {project.shortDescription}
           </p>
 
@@ -69,7 +69,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
 
-          <div className="flex items-center gap-2 text-sm font-semibold text-primary-blue mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="flex items-center gap-2 text-sm font-semibold text-primary-blue mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
             View Case Study
             <ArrowRight
               size={16}
