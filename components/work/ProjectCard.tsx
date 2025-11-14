@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {/* Project Image */}
         <div className="relative aspect-[4/5] overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-bg-black via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-          <div className="w-full h-full bg-gradient-to-br from-primary-blue/20 to-primary-violet/20" />
+          <div className="w-full bg-gradient-to-br from-primary-blue/20 to-primary-violet/20" />
           <motion.div
             className="absolute inset-0"
             whileHover={{ scale: 1.05 }}
