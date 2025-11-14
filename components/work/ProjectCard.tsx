@@ -22,7 +22,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         className="group block relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary-blue/50 transition-all duration-500"
       >
         {/* Project Image */}
-        <div className="relative aspect-[2/1] overflow-hidden">
+
+        <div className="relative aspect-square overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-t from-bg-black via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           <div className="w-full bg-gradient-to-br from-primary-blue/20 to-primary-violet/20" />
           <motion.div
