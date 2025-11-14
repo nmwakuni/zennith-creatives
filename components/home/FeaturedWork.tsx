@@ -32,7 +32,7 @@ export function FeaturedWork() {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           variants={staggerContainer}
           initial="initial"
           whileInView="animate"
@@ -45,7 +45,7 @@ export function FeaturedWork() {
                 className="group block relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 hover:border-primary-blue/50 transition-all duration-500"
               >
                 {/* Project Image */}
-                <div className="relative aspect-[16/10] overflow-hidden">
+                <div className="relative aspect-[4/5] overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-t from-bg-black via-transparent to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   <div className="w-full h-full bg-gradient-to-br from-primary-blue/20 to-primary-violet/20" />
                   <motion.div
@@ -58,7 +58,7 @@ export function FeaturedWork() {
                 </div>
 
                 {/* Project Info */}
-                <div className="p-8">
+                <div className="p-5">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-primary-blue uppercase tracking-wider">
                       {project.category}
@@ -66,15 +66,15 @@ export function FeaturedWork() {
                     <span className="text-xs text-text-muted">{project.year}</span>
                   </div>
 
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary-blue transition-colors">
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary-blue transition-colors">
                     {project.title}
                   </h3>
 
-                  <p className="text-text-gray mb-4 line-clamp-2">
+                  <p className="text-sm text-text-gray mb-3 line-clamp-2">
                     {project.shortDescription}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.services.slice(0, 3).map((service) => (
                       <span
                         key={service}
