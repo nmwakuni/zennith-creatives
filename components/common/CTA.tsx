@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { Magnetic } from './Magnetic'
 
 interface CTAProps {
   title?: string
@@ -99,27 +100,31 @@ export function CTA({
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href={primaryLink}
-                  className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:shadow-primary-blue/50 transition-shadow"
-                >
-                  {primaryText}
-                  <ArrowRight
-                    size={20}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </Link>
-              </motion.div>
+              <Magnetic strength={0.2}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={primaryLink}
+                    className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-primary text-white text-lg font-semibold rounded-full hover:shadow-2xl hover:shadow-primary-blue/50 transition-shadow"
+                  >
+                    {primaryText}
+                    <ArrowRight
+                      size={20}
+                      className="group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </motion.div>
+              </Magnetic>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href={secondaryLink}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white text-lg font-semibold rounded-full hover:bg-white/10 hover:border-primary-blue/50 transition-all"
-                >
-                  {secondaryText}
-                </Link>
-              </motion.div>
+              <Magnetic strength={0.2}>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={secondaryLink}
+                    className="inline-flex items-center gap-2 px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white text-lg font-semibold rounded-full hover:bg-white/10 hover:border-primary-blue/50 transition-all"
+                  >
+                    {secondaryText}
+                  </Link>
+                </motion.div>
+              </Magnetic>
             </motion.div>
           </div>
         </motion.div>
