@@ -5,6 +5,8 @@ import { SITE_CONFIG } from '@/lib/constants'
 import { SmoothScroll } from '@/components/common/SmoothScroll'
 import { Header } from '@/components/navigation/Header'
 import { Footer } from '@/components/navigation/Footer'
+import { CustomCursor } from '@/components/common/CustomCursor'
+import { ScrollProgress } from '@/components/common/ScrollProgress'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -73,7 +75,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="antialiased">
+      <body className="antialiased cursor-none md:cursor-none">
+        <CustomCursor />
+        <ScrollProgress />
         <SmoothScroll>
           <Header />
           <main className="min-h-screen">{children}</main>
